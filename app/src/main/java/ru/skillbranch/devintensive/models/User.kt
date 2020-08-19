@@ -29,7 +29,6 @@ data class User(
     }
 
     init {
-        val str = "Doe"
         println("It's alive!!! \n" +
                 if(lastName === "Doe")"His name is $firstName $lastName"
                 else "And his name is $firstName $lastName"
