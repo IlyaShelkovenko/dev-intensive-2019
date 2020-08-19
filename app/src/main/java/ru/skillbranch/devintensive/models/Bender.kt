@@ -19,17 +19,12 @@ class Bender(var status : Status = Status.NORMAL,
     fun listenAnswer(answer: String) : Pair<String, Triple<Int, Int, Int>>{
         if(validate(answer)) {
             return if (question.answers.contains(answer.toLowerCase())) {
-                if(question == Question.SERIAL) {
-                    question = question.nextQuestion()
-                    "Отлично - ты справился\n${question.question}" to status.color
-                }
-                else {
-                    question = question.nextQuestion()
-                    "Отлично - это правильный ответ!\n${question.question}" to status.color
-                }
+                question = question.nextQuestion()
+                "Отлично - ты справился\n${question.question}" to status.color
+
             } else {
                 status = status.nextStatus()
-                "Это не правильный ответ!\n${question.question}" to status.color
+                "Это не правильный ответ\n${question.question}" to status.color
             }
         }else {
             return correctQuestion() to status.color
