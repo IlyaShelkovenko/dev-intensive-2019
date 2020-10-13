@@ -15,4 +15,15 @@
         <attr name="highlightColor" format="color"/>
     </declare-styleable>
 
+    <attr name="colorEvaluationStart" format="reference"/>
+    <attr name="colorEvaluationEnd" format="reference"/>
+    <attr name="colorItemBackground" format="reference"/>
+    <attr name="colorGrayDark" format="reference"/>
+
+    <declare-styleable name="AvatarImageView">
+        <attr name="aiv_borderColor" format="color"/>
+        <attr name="aiv_borderWidth" format="dimension"/>
+        <attr name="aiv_initials" format="string"/>
+    </declare-styleable>
+
 </resources>
