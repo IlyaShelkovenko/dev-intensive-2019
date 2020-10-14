@@ -14,5 +14,6 @@ abstract class BaseMessage(
     val isIncoming: Boolean = true,
     val date: Date = Date(),
     var isReaded: Boolean = false
-
-)
+){
+    abstract fun shortMessage(): Pair<String, String?>
+}

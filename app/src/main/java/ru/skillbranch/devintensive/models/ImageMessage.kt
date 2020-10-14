@@ -15,4 +15,9 @@ class ImageMessage (
     date: Date = Date(),
     isReaded:Boolean = false,
     var image:String
-) : BaseMessage(id, from, chat, isIncoming, date,isReaded)
+) : BaseMessage(id, from, chat, isIncoming, date,isReaded) {
+
+    override fun shortMessage(): Pair<String, String?> {
+        return "${from.firstName} - отправил фото" to from.firstName
+    }
+}
