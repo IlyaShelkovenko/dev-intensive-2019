@@ -3,6 +3,7 @@
  */
 package ru.skillbranch.devintensive.viewmodels
 
+import android.provider.ContactsContract
 import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.LiveData
