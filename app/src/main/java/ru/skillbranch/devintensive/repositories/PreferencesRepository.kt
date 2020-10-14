@@ -2,10 +2,9 @@ package ru.skillbranch.devintensive.repositories
 
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import android.provider.ContactsContract
 import androidx.appcompat.app.AppCompatDelegate
 import ru.skillbranch.devintensive.App
-import ru.skillbranch.devintensive.models.Profile
+import ru.skillbranch.devintensive.models.data.Profile
 
 object PreferencesRepository {
 

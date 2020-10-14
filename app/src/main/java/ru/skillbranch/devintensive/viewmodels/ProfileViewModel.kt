@@ -3,13 +3,12 @@
  */
 package ru.skillbranch.devintensive.viewmodels
 
-import android.provider.ContactsContract
 import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ru.skillbranch.devintensive.models.Profile
+import ru.skillbranch.devintensive.models.data.Profile
 import ru.skillbranch.devintensive.repositories.PreferencesRepository
 
 class ProfileViewModel : ViewModel() {
