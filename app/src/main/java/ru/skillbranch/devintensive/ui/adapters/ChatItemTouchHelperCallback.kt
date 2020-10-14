@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import ru.skillbranch.devintensive.R
 import ru.skillbranch.devintensive.models.data.ChatItem
+import ru.skillbranch.devintensive.models.data.ChatType
 
 open class ChatItemTouchHelperCallback(
     private val adapter: ChatAdapter,
@@ -40,7 +41,8 @@ open class ChatItemTouchHelperCallback(
     }
 
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-        swipeListener.invoke(adapter.items[viewHolder.adapterPosition])
+        if(adapter.items[viewHolder.adapterPosition].chatType != ChatType.ARCHIVE)
+            swipeListener.invoke(adapter.items[viewHolder.adapterPosition])
     }
 
     override fun onSelectedChanged(viewHolder: RecyclerView.ViewHolder?, actionState: Int) {
