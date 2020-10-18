@@ -2,7 +2,7 @@
  * Created by Ilia Shelkovenko on 14.10.2020.
  */
 
-package ru.skillbranch.devintensive.models
+package ru.skillbranch.devintensive.utils
 
 data class Profile(
     val firstName: String,
@@ -12,7 +12,7 @@ data class Profile(
     val rating: Int = 0,
     val respect: Int = 0
 ) {
-    val nickName: String = ru.skillbranch.devintensive.utils.Utils.transliteration("$firstName $lastName", "_")
+    val nickName: String = Utils.transliteration("$firstName $lastName", "_")
     val rank: String = "Junior Android Developer"
     fun toMap() : Map<String, Any> = mapOf(
         "nickName" to nickName,
