@@ -172,9 +172,6 @@ class ChatAdapter(val listener: (ChatItem) -> Unit) :
     inner class ArchiveViewHolder(convertView: View) : ChatItemViewHolder(convertView), LayoutContainer {
 
         override fun bind(item: ChatItem, listener: (ChatItem) -> Unit) {
-            Glide.with(itemView)
-                .load(R.drawable.ic_archive_black_24dp)
-                .into(iv_avatar_archive)
 
             with(tv_date_archive) {
                 visibility = if(item.lastMessageDate != null) View.VISIBLE else View.GONE
