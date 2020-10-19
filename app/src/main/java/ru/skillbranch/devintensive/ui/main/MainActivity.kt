@@ -40,11 +40,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         chatAdapter = ChatAdapter{
-            if(it.chatType == ChatType.ARCHIVE){
+            /*if(it.chatType == ChatType.ARCHIVE){
                 val intent = Intent(this, ArchiveActivity::class.java)
                 startActivity(intent)
             }
-            else Snackbar.make(rv_chat_list, "Click on ${it.title}", Snackbar.LENGTH_LONG).show()
+            else*/ Snackbar.make(rv_chat_list, "Click on ${it.title}", Snackbar.LENGTH_LONG).show()
         }
 
         val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
